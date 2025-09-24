@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video</title>
+ <style>
+
+    #urvid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            transform: translate(-50%, -50%);
+            color: #f1f1f1;
+            width: 100%;
+            max-width: 100%;
+            padding: 20px;
+          
+        }
+
+        #pause_button {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        #pause_button:hover {
+            color:#000;
+            background: #000;
+        }
+        /* Horizontal scroll gallery */
+        .scroll-container {
+            margin-top: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 5px;
+        }
+        .scroll-container img{
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+         
+
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="urvid">
+    <source src="ACT12_BALDEMOR/vid2.mp4" type="video/mp4">
+    </video>
+
+        <div class="content">
+            <h1>Heading</h1>
+            <p>Gallery</p>
+            <button id="pause_button" onclick="myFunction()">Pause</button>
+
+             <div class="scroll-container">
+        
+         
+        <img src="ACT12_BALDEMOR/12.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/3.PNG" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/10.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/7.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/31.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/23.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/19.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/2.PNG" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/15.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/4.PNG" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/30.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/21.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/9.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/14.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/37.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/38.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/28.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/5.jpg" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/17.jfif" width="280" height="320"> </a>
+        <img src="ACT12_BALDEMOR/26.jfif" width="280" height="320"> </a>
+    
+        </div>
+        </div>
+
+        <script>
+        function myFunction() {
+            let video = document.getElementById("urvid");
+            let btn = document.getElementById("pause_button");
+
+            if (video.paused) {
+                video.play();
+                btn.innerText = "Pause";
+            } else {
+                video.pause();
+                btn.innerText = "Play";
+            }
+        }
+    </script>
+      
+</body>
+
+</html>
